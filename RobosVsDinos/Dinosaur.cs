@@ -8,16 +8,17 @@ namespace RobosVsDinos
 {
     class Dinosaur
     {
-        int health = 10;
-        int energy = 10;
-        string type;
-        int attackPower = 3;
+        int dinoHealth;
+        int energy;
+        string dinoType;
+        Weapon dinoWeapon;
         
-        public void TypeOfDinosaur(string type)
+        public Dinosaur(string dinoType)
         {
-            //pick type of dinosaur
-            //list of dinosaurs?
-
+            this.dinoType = dinoType;
+            dinoHealth = 100;
+            energy = 100;
+            dinoWeapon = new Weapon("Stomp", 10);
         }
 
     }
