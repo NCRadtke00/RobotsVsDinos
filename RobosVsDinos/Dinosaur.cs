@@ -32,7 +32,7 @@ namespace RobosVsDinos
         //if(0 >= robot.Health)
         //{
         //  remove robot.roboName from list
-        //}
+        }
 
         
     }

@@ -9,17 +9,38 @@ namespace RobosVsDinos
 {
     class Fleet
     {
+        public List<Robot> robots;
+        public List<Weapon> robotWeapons;
         public Fleet()
         { 
-            List<Robot> robots = new List<Robot>();
+            robots = new List<Robot>();
+            robotWeapons = new List<Weapon>();
+            robotWeapons.Add(new Weapon("Blaster", 25));
+            robotWeapons.Add(new Weapon("Sword", 25));
+            robotWeapons.Add(new Weapon("Cannon", 25));
+            
+            robots.Add(new Robot(GetUserData(), ReturnWeapon()));
+            robots.Add(new Robot(GetUserData(), ReturnWeapon()));
+            robots.Add(new Robot(GetUserData(), ReturnWeapon()));
 
-            Robot firstRobot = new Robot("");
-            Robot secondRobot = new Robot("");
-            Robot thirdRobot = new Robot("");
+        }
 
-            robots.Add(firstRobot);
-            robots.Add(secondRobot);
-            robots.Add(thirdRobot);
+        public string GetUserData()
+        {
+            Console.WriteLine("What is your robots name? ");
+            string results = Console.ReadLine();
+            return results;
+        }
+
+
+        public Weapon ReturnWeapon()
+        {
+            Console.WriteLine("Pick a weapon");
+            Console.WriteLine("---(1)Blaster---");
+            Console.WriteLine("---(2)Sword-----");
+            Console.WriteLine("---(3)Cannon----");
+            int userInput = int.Parse(Console.ReadLine());
+            return robotWeapons[userInput - 1];
         }
     }
 }

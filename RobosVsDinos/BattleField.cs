@@ -27,10 +27,11 @@ namespace RobosVsDinos
         }
         public void RunBattleField()
         {
-            if(dinoAttack)
-            {
+            //Who attacks first?
+        //    if(dinoAttack)
+        //    {
 
-            }
+        //    }
         }
     }
 }

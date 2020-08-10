@@ -14,19 +14,12 @@ namespace RobosVsDinos
         Weapon robotWeapon;
         //pick weapon, weapon list?
 
-        public Robot(string robotName)
+        public Robot(string robotName, Weapon weapon)
         {
             robotHealth = 100;
             powerLevel = 100;
-            this.robotName = GetUserData("Please enter your robots name: ");
-            robotWeapon = new Weapon("Blaster", 20);
-        }
-
-        public string GetUserData(string output)
-        {
-            Console.WriteLine(output);
-            string results = Console.ReadLine();
-            return results;
+            this.robotName = robotName;
+            robotWeapon = weapon;
         }
 
         public void AttackDino(Dinosaur dinoToAttack)
