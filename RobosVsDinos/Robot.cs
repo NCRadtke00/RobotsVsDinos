@@ -8,13 +8,25 @@ namespace RobosVsDinos
 {
     class Robot
     {
-        int health = 10;
-        int powerLevel = 10;
+        int robotHealth;
+        int powerLevel;
         string name;
-        Weapon weapon = new Weapon("Blaster", 5);
+        Weapon robotWeapon;
 
+        public Robot(string name)
+        {
+            robotHealth = 100;
+            powerLevel = 100;
+            name = GetUserData("Please enter your robots name: ");
+            robotWeapon = new Weapon("Blaster", 20);
+        }
 
-
+        public string GetUserData(string output)
+        {
+            Console.WriteLine(output);
+            string results = Console.ReadLine();
+            return results;
+        }
 
     }
 }
