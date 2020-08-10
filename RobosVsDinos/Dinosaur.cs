@@ -12,19 +12,19 @@ namespace RobosVsDinos
         public int dinoHealth;
         public int energy;
         public string dinoType;
-        Weapon dinoWeapon;
+        DinoAttack dinoAttack;
 
-        public Dinosaur(string dinoType)
+        public Dinosaur(string dinoType, DinoAttack dinoAttack)
         {
             this.dinoType = dinoType;
             dinoHealth = 100;
             energy = 100;
-            dinoWeapon = new Weapon("Stomp", 10);
+            this.dinoAttack = dinoAttack;
         }
 
         public void AttackRobot(Robot roboToAttack)
         {
-            roboToAttack.robotHealth -= dinoWeapon.attackPower;
+            roboToAttack.robotHealth -= dinoAttack.attackPower;
             energy -= 10;
         
         // this might be nonsense but 

@@ -20,13 +20,13 @@ namespace RobosVsDinos
             DinosaurAttacks[2] = new DinoAttack("rage", 40);
 
    
-            dinoType.Add(new Dinosaur("raptor",PickAttack()));
-            dinoType.Add(new Dinosaur("trex", PickAttack()));
-            dinoType.Add(new Dinosaur("triceratops", PickAttack()));
+            dinoType.Add(new Dinosaur("raptor",PickAttack("raptor")));
+            dinoType.Add(new Dinosaur("trex", PickAttack("trex")));
+            dinoType.Add(new Dinosaur("triceratops", PickAttack("triceratops")));
         }
-        public DinoAttack PickAttack()
+        public DinoAttack PickAttack(string dinoName)
         {
-            Console.WriteLine("Which Attack would you like to use?");
+            Console.WriteLine($"Which Attack would you like {dinoName} to use?");
             Console.WriteLine("---(1)chomp----");
             Console.WriteLine("---(2)stomp----");
             Console.WriteLine("---(3)rage-----");
