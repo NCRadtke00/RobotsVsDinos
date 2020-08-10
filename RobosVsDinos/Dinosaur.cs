@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace RobosVsDinos
         public int energy;
         public string dinoType;
         Weapon dinoWeapon;
-        
+
         public Dinosaur(string dinoType)
         {
             this.dinoType = dinoType;
@@ -25,6 +26,14 @@ namespace RobosVsDinos
         {
             roboToAttack.robotHealth -= dinoWeapon.attackPower;
             energy -= 10;
-        }
+        
+        // this might be nonsense but 
+        //Console.WriteLine($"The {roboName} has taken {dinoWeapon.attackPower} from {dinoType}.");
+        //if(0 >= robot.Health)
+        //{
+        //  remove robot.roboName from list
+        //}
+
+        
     }
 }

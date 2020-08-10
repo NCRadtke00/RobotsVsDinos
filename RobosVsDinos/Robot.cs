@@ -10,14 +10,15 @@ namespace RobosVsDinos
     {
         public int robotHealth;
         public int powerLevel;
-        public string name;
+        public string robotName;
         Weapon robotWeapon;
+        //pick weapon, weapon list?
 
-        public Robot(string name)
+        public Robot(string robotName)
         {
             robotHealth = 100;
             powerLevel = 100;
-            name = GetUserData("Please enter your robots name: ");
+            this.robotName = GetUserData("Please enter your robots name: ");
             robotWeapon = new Weapon("Blaster", 20);
         }
 
