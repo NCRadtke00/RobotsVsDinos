@@ -8,5 +8,7 @@ namespace RobosVsDinos
 {
     class Fleet
     {
+        List<Robots> robot = new List<Robots>();
+
     }
 }

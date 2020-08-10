@@ -8,5 +8,20 @@ namespace RobosVsDinos
 {
     class Attack
     {
+        public void Attack()
+        {
+            if (" " == " ")
+            {
+                Next.Attack();
+            }
+            else if (" " > " ")
+            {
+                Robot.health +- Dinosaur.attackPower;
+            }
+            else if (" " > " ")
+            {
+                Dinosaur.health +- Robot.attackPower;
+            }
+        }
     }
 }

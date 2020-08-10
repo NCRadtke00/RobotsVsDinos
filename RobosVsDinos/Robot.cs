@@ -8,5 +8,12 @@ namespace RobosVsDinos
 {
     class Robot
     {
+        int health = 10;
+        int powerLevel = 10;
+        string name;
+        Weapon weapon("Blaster", 5);
+
+
+
     }
 }
