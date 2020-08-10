@@ -8,9 +8,9 @@ namespace RobosVsDinos
 {
     class Robot
     {
-        int robotHealth;
-        int powerLevel;
-        string name;
+        public int robotHealth;
+        public int powerLevel;
+        public string name;
         Weapon robotWeapon;
 
         public Robot(string name)
@@ -28,5 +28,10 @@ namespace RobosVsDinos
             return results;
         }
 
+        public void AttackDino(Dinosaur dinoToAttack)
+        {
+            dinoToAttack.dinoHealth -= robotWeapon.attackPower;
+            powerLevel -= 10;
+        }
     }
 }

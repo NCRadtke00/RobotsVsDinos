@@ -8,17 +8,19 @@ namespace RobosVsDinos
 {
     class BattleField
     {
+        //public Fleet fleet;
+        //public Herd herd;
         public void RunGame()
         {
-
-            if(Robot.health == 0 || Dinosaur.health == 0)
-            {
-                Console.WriteLine("The Dinosaur heard has over run the robots!");
-            }
-            else
-            {
-                Console.WriteLine("The Robot fleet has slaughtered the Dinosaurs!");
-            }
+            Console.WriteLine("------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("-----------------------------------------Welcome to the War!------------------------------------------");
+            Console.WriteLine("------------------------------------------------------------------------------------------------------");
+            Console.ReadLine();
+            
+            //if(Robot.robotHealth >Dinosaur.dinoHealth)
+            //{
+            //    Robot.name AttackDino();
+            //}
         }
     }
 }
