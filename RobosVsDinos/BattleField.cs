@@ -15,33 +15,36 @@ namespace RobosVsDinos
 
         public BattleField()
         {
-            fleet.robots[0].AttackDino(herd.dinoType[0]);
-            herd.dinoType[0].AttackRobot(fleet.robots[0]);
-            if (((fleet.robots[0].robotHealth > 0)) && ((herd.dinoType[0].dinoHealth >0)));
+            fleet = new Fleet();
+            Console.ReadLine();
+            Console.Clear();
+            herd = new Herd();
+            Console.ReadLine();
+            Console.Clear();
+            while (((fleet.robots[0].robotHealth > 0)) && ((herd.dinoType[0].dinoHealth > 0)))
             {
                 Console.WriteLine("would you like to attack the herd?");
                 string result = Console.ReadLine();
                 if (result == "Yes" || result == "yes")
                 {
                     fleet.robots[0].AttackDino(herd.dinoType[0]);
-                    RemoveWounded();
-                    DisplayWinner();
-                    Console.WriteLine($"Oh no, {herd.dinoType[0]} is retaliating!");
+
+                    Console.WriteLine($"Oh no, it is retaliating!");
                     herd.dinoType[0].AttackRobot(fleet.robots[0]);
-                    RemoveWounded();
                     DisplayWinner();
                 }
                 else
                 {
                     herd.dinoType[0].AttackRobot(fleet.robots[0]);
-                    RemoveWounded();
-                    DisplayWinner();
                     Console.WriteLine("Oh no, retaliate!!!");
                     fleet.robots[0].AttackDino(herd.dinoType[0]);
-                    RemoveWounded();
                     DisplayWinner();
                 }
             }
+            //if (((fleet.robots[0].robotHealth > 0)) && ((herd.dinoType[0].dinoHealth >0)));
+            //{
+               
+            //}
         }
 
         public void RemoveWounded()

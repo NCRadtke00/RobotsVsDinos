@@ -8,8 +8,6 @@ namespace RobosVsDinos
 {
     class RunGame
     {
-        public Fleet fleet;
-        public Herd herd;
         public BattleField BattleField;
        
        
@@ -18,14 +16,6 @@ namespace RobosVsDinos
             Console.WriteLine("------------------------------------------------------------------------------------------------------");
             Console.WriteLine("-----------------------------------------Welcome to the War!------------------------------------------");
             Console.WriteLine("------------------------------------------------------------------------------------------------------");
-            Console.ReadLine();
-            Console.Clear();
-            fleet = new Fleet();
-            //Display fleet
-            Console.ReadLine();
-            Console.Clear();
-            herd = new Herd();
-            //display herd
             Console.ReadLine();
             Console.Clear();
             BattleField = new BattleField();
