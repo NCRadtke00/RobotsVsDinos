@@ -10,7 +10,6 @@ namespace RobosVsDinos
     {
         public string type;
         public int attackPower;
-        
         public Weapon(string newType, int attackPower)
         {
             this.type = newType;

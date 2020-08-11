@@ -12,21 +12,8 @@ namespace RobosVsDinos
     {
         public Fleet fleet;
         public Herd herd;
-        public void RunGame()
-        {
-            Console.WriteLine("------------------------------------------------------------------------------------------------------");
-            Console.WriteLine("-----------------------------------------Welcome to the War!------------------------------------------");
-            Console.WriteLine("------------------------------------------------------------------------------------------------------");
-            Console.ReadLine();
-            fleet = new Fleet();
-            Console.Clear();
-            herd = new Herd();
-            Console.Clear();
-            RunBattleField();
-            Console.WriteLine("yeah");
-            Console.ReadLine();
-        }
-        public void RunBattleField()
+
+        public BattleField()
         {
             fleet.robots[0].AttackDino(herd.dinoType[0]);
             herd.dinoType[0].AttackRobot(fleet.robots[0]);

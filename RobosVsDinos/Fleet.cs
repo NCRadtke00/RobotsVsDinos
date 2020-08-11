@@ -13,30 +13,21 @@ namespace RobosVsDinos
         public List<Weapon> robotWeapons;
         public Fleet()
         {
-            
             robots = new List<Robot>();
-            //foreach(string robot in robots)
-            //{
-            //    Console.WriteLine($"Robots: {Convert.ToString(new Robot(GetUserData(), ReturnWeapon()))} ");
-            //}
             robotWeapons = new List<Weapon>();
             robotWeapons.Add(new Weapon("Blaster", 25));
             robotWeapons.Add(new Weapon("Sword", 25));
             robotWeapons.Add(new Weapon("Cannon", 25));
-
             robots.Add(new Robot(GetUserData(), ReturnWeapon()));
             robots.Add(new Robot(GetUserData(), ReturnWeapon()));
             robots.Add(new Robot(GetUserData(), ReturnWeapon()));
-
         }
-
         public string GetUserData()
         {
             Console.WriteLine("What is your robots name? ");
             string results = Console.ReadLine();
             return results;
         }
-
         public Weapon ReturnWeapon()
         {
             Console.WriteLine("Pick a weapon");
@@ -46,6 +37,5 @@ namespace RobosVsDinos
             int userInput = int.Parse(Console.ReadLine());
             return robotWeapons[userInput - 1];
         }
-
     }
 }

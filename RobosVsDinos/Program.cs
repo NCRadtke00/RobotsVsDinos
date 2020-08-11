@@ -10,8 +10,8 @@ namespace RobosVsDinos
     {
         static void Main(string[] args)
         {
-            BattleField battleField = new BattleField();
-            battleField.RunGame();
+            RunGame runGame = new RunGame();
+            runGame.RunGameStory();
         }
     }
 }

@@ -24,7 +24,7 @@ namespace RobosVsDinos
         {
             roboToAttack.robotHealth -= dinoAttack.attackPower;
             energy -= 10;
-            // Console.WriteLine($"The {roboName} has taken {attackType.attackPower} from {dinoType}.");
+            Console.WriteLine($"The {roboToAttack} has taken {dinoAttack.attackPower} from {dinoType}.");
         }
     }
 }
