@@ -32,6 +32,6 @@ namespace RobosVsDinos
             Console.WriteLine("---(3)rage-----");
             int userInput = int.Parse(Console.ReadLine());
             return DinosaurAttacks[userInput -1];
-        }
+        } 
     }
 }

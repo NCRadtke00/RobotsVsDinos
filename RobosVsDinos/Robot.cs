@@ -12,8 +12,6 @@ namespace RobosVsDinos
         public int powerLevel;
         public string robotName;
         Weapon robotWeapon;
-        //pick weapon, weapon list?
-
         public Robot(string robotName, Weapon weapon)
         {
             robotHealth = 100;
@@ -21,11 +19,11 @@ namespace RobosVsDinos
             this.robotName = robotName;
             robotWeapon = weapon;
         }
-
         public void AttackDino(Dinosaur dinoToAttack)
         {
             dinoToAttack.dinoHealth -= robotWeapon.attackPower;
             powerLevel -= 10;
+            // Console.WriteLine($"The {dinoType} has taken {robotWeapon.attackPower} from {robotName}.");
         }
     }
 }
