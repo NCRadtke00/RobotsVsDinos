@@ -14,20 +14,23 @@ namespace RobosVsDinos
         public Herd herd;
         public void RunGame()
         {
-            fleet = new Fleet();
-            herd = new Herd();
             Console.WriteLine("------------------------------------------------------------------------------------------------------");
             Console.WriteLine("-----------------------------------------Welcome to the War!------------------------------------------");
             Console.WriteLine("------------------------------------------------------------------------------------------------------");
             Console.ReadLine();
+            fleet = new Fleet();
+            Console.Clear();
+            herd = new Herd();
+            Console.Clear();
             RunBattleField();
+            Console.WriteLine("yeah");
+            Console.ReadLine();
         }
         public void RunBattleField()
         {
             fleet.robots[0].AttackDino(herd.dinoType[0]);
             herd.dinoType[0].AttackRobot(fleet.robots[0]);
-            //Who attacks first ?
-            if ((fleet.robots[0].robotHealth > 0)) || ((herd.dinoType[0].dinoHealth >0));
+            if (((fleet.robots[0].robotHealth > 0)) && ((herd.dinoType[0].dinoHealth >0)));
             {
                 Console.WriteLine("would you like to attack the herd?");
                 string result = Console.ReadLine();
@@ -70,11 +73,11 @@ namespace RobosVsDinos
         }
         public void DisplayWinner()
         {
-            if (herd.dinoType[0] == [0])
+            if (herd.dinoType[0].dinoHealth == 0 )
             {
                 Console.WriteLine("The Robots have won the war! The Dinos have been extinguished!");
             }
-            else if (fleet.robots[0] = [0])
+            else if (fleet.robots[0].robotHealth == 0)
             {
                 Console.WriteLine("The Heard has crush the robots! They have won the war!");
             }
