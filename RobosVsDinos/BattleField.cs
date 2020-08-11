@@ -27,7 +27,7 @@ namespace RobosVsDinos
             fleet.robots[0].AttackDino(herd.dinoType[0]);
             herd.dinoType[0].AttackRobot(fleet.robots[0]);
             //Who attacks first ?
-            if ((fleet.robots[0].robotHealth > 0)) //&& /*(herd.dinosaur[0].dinoHealth >0)*/)
+            if ((fleet.robots[0].robotHealth > 0)) || ((herd.dinoType[0].dinoHealth >0));
             {
                 Console.WriteLine("would you like to attack the herd?");
                 string result = Console.ReadLine();
@@ -36,7 +36,7 @@ namespace RobosVsDinos
                     fleet.robots[0].AttackDino(herd.dinoType[0]);
                     RemoveWounded();
                     DisplayWinner();
-                    Console.WriteLine($"Oh no, {Dinosaur} is retaliating!");
+                    Console.WriteLine($"Oh no, {herd.dinoType[0]} is retaliating!");
                     herd.dinoType[0].AttackRobot(fleet.robots[0]);
                     RemoveWounded();
                     DisplayWinner();
@@ -57,24 +57,24 @@ namespace RobosVsDinos
         public void RemoveWounded()
         {
 
-            if (Robot.robotHealth >= 0)
+            if (fleet.robots[0].robotHealth >= 0)
             {
                 //remove Robot from list of robots
-                Console.WriteLine($"{Robot} has been lost from the fleet! The scrap parts will build a new robot!");
+                Console.WriteLine($"{fleet.robots[0]} has been lost from the fleet! The scrap parts will build a new robot!");
             }
-            else if (Dinosaur.dinoHealth >= 0)
+            else if (herd.dinoType[0].dinoHealth >= 0)
             {
                 //remove dino from list of dinos
-                Console.WriteLine($"{Dino} has been lost from the Herd! They will not be forgotten!");
+                Console.WriteLine($"{herd.dinoType[0]} has been lost from the Herd! They will not be forgotten!");
             }
         }
         public void DisplayWinner()
         {
-            if (List < Dinosaur > dinosaur == [0])
+            if (herd.dinoType[0] == [0])
             {
                 Console.WriteLine("The Robots have won the war! The Dinos have been extinguished!");
             }
-            else if (List < Robot > robot += [0])
+            else if (fleet.robots[0] = [0])
             {
                 Console.WriteLine("The Heard has crush the robots! They have won the war!");
             }
