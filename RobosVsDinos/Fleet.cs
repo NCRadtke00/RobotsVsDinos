@@ -15,9 +15,9 @@ namespace RobosVsDinos
         {
             robots = new List<Robot>();
             robotWeapons = new List<Weapon>();
-            robotWeapons.Add(new Weapon("Blaster", 75));
-            robotWeapons.Add(new Weapon("LazerSword", 250));
-            robotWeapons.Add(new Weapon("Cannon", 100));
+            robotWeapons.Add(new Weapon("Blaster", 25));
+            robotWeapons.Add(new Weapon("LazerSword", 35));
+            robotWeapons.Add(new Weapon("Cannon", 75));
             robots.Add(new Robot(GetUserData(), ReturnWeapon()));
             Console.Clear();
             robots.Add(new Robot(GetUserData(), ReturnWeapon()));
@@ -36,7 +36,7 @@ namespace RobosVsDinos
         {
             Console.WriteLine("Pick a weapon");
             Console.WriteLine("---(1)Blaster------");
-            Console.WriteLine("---(2)Sword--------");
+            Console.WriteLine("---(2)LazerSword---");
             Console.WriteLine("---(3)Cannon-------");
             int userInput = int.Parse(Console.ReadLine());
             return robotWeapons[userInput - 1];

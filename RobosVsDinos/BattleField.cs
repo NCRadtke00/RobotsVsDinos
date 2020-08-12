@@ -20,11 +20,15 @@ namespace RobosVsDinos
             Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
             Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
             Console.WriteLine("-----------------------------Please name the rest of your robot fleet!------------------------------------------");
+            //Console.WriteLine("-----------------------------------Please get your herd ready for battle!---------------------------------------");
             Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
             Console.ReadLine();
             Console.Clear();
             fleet = new Fleet();
             //display list<fleet>
+            Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("--------------------------Please set your dino's attack moves!--------------------------------------------------");
+            Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
             Console.ReadLine();
             Console.Clear();
             herd = new Herd();
@@ -72,6 +76,7 @@ namespace RobosVsDinos
                         //Console.WriteLine($"The {dinoType} has been lost from the Herd! They will not be forgotten!");
                         Console.WriteLine("The dino has been lost from the Herd! They will not be forgotten!");
                         Console.ReadLine();
+                        Console.Clear();
                     }
                     else if (fleet.robots[0].robotHealth <= 0)
                     {
@@ -79,8 +84,10 @@ namespace RobosVsDinos
                         //Console.WriteLine($"The {robotName} has been lost from the Herd! They will not be forgotten!");
                         Console.WriteLine("The robot has been lost from the fleet! The parts will be recycled!");
                         Console.ReadLine();
+                        Console.Clear();
                     }
                     Console.ReadLine();
+                    Console.Clear();
                 }
                 else if (result == "No" || result == "no")
                 {
@@ -93,6 +100,7 @@ namespace RobosVsDinos
                         //Console.WriteLine($"The {dinoType} has been lost from the Herd! They will not be forgotten!");
                         Console.WriteLine("The dino has been lost from the Herd! They will not be forgotten!");
                         Console.ReadLine();
+                        Console.Clear();
                     }
                     else if (fleet.robots[0].robotHealth <= 0)
                     {
@@ -100,8 +108,10 @@ namespace RobosVsDinos
                         //Console.WriteLine($"The {robotName} has been lost from the Herd! They will not be forgotten!");
                         Console.WriteLine("The robot has been lost from the fleet! The parts will be recycled!");
                         Console.ReadLine();
+                        Console.Clear();
                     }
                     Console.ReadLine();
+                    Console.Clear();
                 }
             }
         }

@@ -14,8 +14,8 @@ namespace RobosVsDinos
         {
             dinoType = new List<Dinosaur>();
             DinosaurAttacks = new DinoAttack[3];
-            DinosaurAttacks[0] = new DinoAttack("chomp", 40);
-            DinosaurAttacks[1] = new DinoAttack("stomp", 40);
+            DinosaurAttacks[0] = new DinoAttack("chomp", 20);
+            DinosaurAttacks[1] = new DinoAttack("stomp", 30);
             DinosaurAttacks[2] = new DinoAttack("rage", 50);
             dinoType.Add(new Dinosaur("raptor",PickAttack("raptor")));
             Console.Clear();
