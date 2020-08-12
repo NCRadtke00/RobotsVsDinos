@@ -17,7 +17,7 @@ namespace RobosVsDinos
             robotWeapons = new List<Weapon>();
             robotWeapons.Add(new Weapon("Blaster", 35));
             robotWeapons.Add(new Weapon("LazerSword", 25));
-            robotWeapons.Add(new Weapon("Cannon", 50));
+            robotWeapons.Add(new Weapon("Cannon", 110));
             robots.Add(new Robot(GetUserData(), ReturnWeapon()));
             robots.Add(new Robot(GetUserData(), ReturnWeapon()));
             robots.Add(new Robot(GetUserData(), ReturnWeapon()));

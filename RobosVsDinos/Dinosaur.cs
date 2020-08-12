@@ -15,6 +15,7 @@ namespace RobosVsDinos
         DinoAttack dinoAttack;
         public Dinosaur(string dinoType, DinoAttack dinoAttack)
         {
+           
             this.dinoType = dinoType;
             dinoHealth = 100;
             energy = 100;
@@ -24,7 +25,7 @@ namespace RobosVsDinos
         {
             roboToAttack.robotHealth -= dinoAttack.attackPower;
             energy -= 10;
-            Console.WriteLine($"The {roboToAttack} has taken {dinoAttack.attackPower} from {dinoType}.");
+            Console.WriteLine($"The robot has taken {dinoAttack.attackPower} from {dinoType}.");
         }
     }
 }

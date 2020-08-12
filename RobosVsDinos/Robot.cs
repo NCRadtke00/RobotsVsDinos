@@ -23,7 +23,7 @@ namespace RobosVsDinos
         {
             dinoToAttack.dinoHealth -= robotWeapon.attackPower;
             powerLevel -= 10;
-            Console.WriteLine($"The {dinoToAttack} has taken {robotWeapon.attackPower} from {robotName}.");
+            Console.WriteLine($"The dino has taken {robotWeapon.attackPower} from {robotName}.");
         }
     }
 }
