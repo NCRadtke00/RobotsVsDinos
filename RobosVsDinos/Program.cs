@@ -11,7 +11,6 @@ namespace RobosVsDinos
         static void Main(string[] args)
         {
             BattleField battleField = new BattleField();
-            //battleField.RunBattleField();
         }
     }
 }
