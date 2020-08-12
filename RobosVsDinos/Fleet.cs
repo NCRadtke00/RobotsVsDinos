@@ -15,12 +15,16 @@ namespace RobosVsDinos
         {
             robots = new List<Robot>();
             robotWeapons = new List<Weapon>();
-            robotWeapons.Add(new Weapon("Blaster", 35));
-            robotWeapons.Add(new Weapon("LazerSword", 25));
-            robotWeapons.Add(new Weapon("Cannon", 110));
+            robotWeapons.Add(new Weapon("Blaster", 75));
+            robotWeapons.Add(new Weapon("LazerSword", 250));
+            robotWeapons.Add(new Weapon("Cannon", 100));
             robots.Add(new Robot(GetUserData(), ReturnWeapon()));
+            Console.Clear();
             robots.Add(new Robot(GetUserData(), ReturnWeapon()));
+            Console.Clear();
             robots.Add(new Robot(GetUserData(), ReturnWeapon()));
+            Console.WriteLine("Nicely done! This fleet will never be stopped!");
+            Console.Clear();
         }
         public string GetUserData()
         {

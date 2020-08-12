@@ -15,36 +15,44 @@ namespace RobosVsDinos
 
         public BattleField()
         {
+            Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("-----------------------------------------Welcome to the War!----------------------------------------------------");
+            Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("-----------------------------Please name the rest of your robot fleet!------------------------------------------");
+            Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+            Console.ReadLine();
+            Console.Clear();
             fleet = new Fleet();
+            //display list<fleet>
             Console.ReadLine();
             Console.Clear();
             herd = new Herd();
+            //display List<herd>
+            Console.ReadLine();
+            Console.Clear();
+            Console.WriteLine("Now that the Fleet is here we can finally set an attack on the Herd!");
+            Console.ReadLine();
+            Console.WriteLine("OH NO!!");
+            Console.WriteLine("The Alarms are going off!!");
+            Console.WriteLine("The heard is rapidly approaching our location!");
             Console.ReadLine();
             Console.Clear();
             RunBattleField();
-        } 
+            DisplayWinner();
+            Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("-----------------------------------------The War Is Over!-------------------------------------------------------");
+            Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("-----------------------------Thank you for playing! ------------------------------------------------------------");
+            Console.WriteLine("--------------------------------------------------------------------------------------------------------------NR");
+            Console.ReadLine();
+            Console.WriteLine("Nick is awesome!");
+            Console.WriteLine("Make sure to give him the best grades!!!");
+            Console.ReadLine();
+        }
         public void RunBattleField()
         {
-            //while (fleet.robots.Count > 0 && herd.dinoType.Count > 0)
-            //    fleet.robots[0].AttackDino(herd.dinoType[0]);
-            //if (herd.dinoType[0].dinoHealth <= 0)
-            //{
-            //    herd.dinoType.Remove(herd.dinoType[0]);
-            //}
-            //if (fleet.robots[0].robotHealth <= 0)
-            //{
-            //    fleet.robots.Remove(0);
-            //}
-            //if (fleet.robots.Count > 0)
-            //{
-            //    Console.WriteLine("Robots Win");
-            //    Console.ReadLine();
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Dinosaurs Win");
-            //    Console.ReadLine();
-            //}
             while (((fleet.robots.Count > 0)) && ((herd.dinoType.Count > 0)))
             {
                 Console.WriteLine("would you like to attack the herd?");
@@ -61,149 +69,58 @@ namespace RobosVsDinos
                     if (herd.dinoType[0].dinoHealth <= 0)
                     {
                         herd.dinoType.Remove(herd.dinoType[0]);
+                        //Console.WriteLine($"The {dinoType} has been lost from the Herd! They will not be forgotten!");
                         Console.WriteLine("The dino has been lost from the Herd! They will not be forgotten!");
-                        if (fleet.robots.Count <= 0)
-                        {
-                            Console.WriteLine("The Herd has won!");
-                            Console.ReadLine();
-                        }
+                        Console.ReadLine();
                     }
-                    else if (herd.dinoType.Count <= 0)
+                    else if (fleet.robots[0].robotHealth <= 0)
                     {
-                        Console.WriteLine("The Fleet has won!");
+                        fleet.robots.Remove(fleet.robots[0]);
+                        //Console.WriteLine($"The {robotName} has been lost from the Herd! They will not be forgotten!");
+                        Console.WriteLine("The robot has been lost from the fleet! The parts will be recycled!");
                         Console.ReadLine();
                     }
                     Console.ReadLine();
-                    
                 }
                 else if (result == "No" || result == "no")
                 {
                     herd.dinoType[0].AttackRobot(fleet.robots[0]);
                     Console.WriteLine("Oh no, retaliate!!!");
                     fleet.robots[0].AttackDino(herd.dinoType[0]);
-                    if (fleet.robots.Count <= 0)
+                    if (herd.dinoType[0].dinoHealth <= 0)
                     {
-                        Console.WriteLine("The Herd has won!");
+                        herd.dinoType.Remove(herd.dinoType[0]);
+                        //Console.WriteLine($"The {dinoType} has been lost from the Herd! They will not be forgotten!");
+                        Console.WriteLine("The dino has been lost from the Herd! They will not be forgotten!");
                         Console.ReadLine();
                     }
-                    else if (herd.dinoType.Count <= 0)
+                    else if (fleet.robots[0].robotHealth <= 0)
                     {
-                        Console.WriteLine("The Fleet has won!");
+                        fleet.robots.Remove(fleet.robots[0]);
+                        //Console.WriteLine($"The {robotName} has been lost from the Herd! They will not be forgotten!");
+                        Console.WriteLine("The robot has been lost from the fleet! The parts will be recycled!");
                         Console.ReadLine();
                     }
                     Console.ReadLine();
-                   
                 }
-                //else if (fleet.robots[0].robotHealth <= 0)
-                //{
-                //    fleet.robots.Remove(fleet.robots[0]);
-                //    Console.WriteLine($"{fleet.robots[0]} has been lost from the fleet! The scrap parts will build a new robot!");
-
-                //    Console.ReadLine();
-                //    Console.Clear();
-                //}
-                //else if (herd.dinoType[0].dinoHealth >= 0)
-                //{
-                //    herd.dinoType.Remove(herd.dinoType[0]);
-                //    Console.WriteLine($"{herd.dinoType[0]} has been lost from the Herd! They will not be forgotten!");
-
-                //    Console.ReadLine();
-                //    Console.Clear();
-                //}
-                //else if (fleet.robots.Count < 0)
-                //{
-                //    Console.WriteLine("The Herd has won!");
-                //    Console.ReadLine();
-                //    Console.Clear();
-                //}
-                //else if (herd.dinoType.Count < 0)
-                //{
-                //    Console.WriteLine("The Fleet has won!");
-                //    Console.ReadLine();
-                //    Console.Clear();
-                //}
-                //if (((fleet.robots.Count > 0)) && ((herd.dinoType.Count > 0)))
-                //{
-                //    Console.WriteLine("would you like to attack the herd?");
-                //    Console.WriteLine("----------------------------------");
-                //    Console.WriteLine("---------   Yes   ----------------");
-                //    Console.WriteLine("-----------    No   --------------");
-                //    Console.WriteLine("----------------------------------");
-                //    result = Console.ReadLine();
-                //    if (result == "Yes" || result == "yes")
-                //    {
-                //        fleet.robots[0].AttackDino(herd.dinoType[0]);
-                //        Console.WriteLine("Oh no, it is attacking back!");
-                //        herd.dinoType[0].AttackRobot(fleet.robots[0]);
-                       
-                //        Console.ReadLine();
-                //        Console.Clear();
-                //    }
-                //    else if (result == "No" || result == "no")
-                //    {
-                //        herd.dinoType[0].AttackRobot(fleet.robots[0]);
-                //        Console.WriteLine("Oh no, retaliate!!!");
-                //        fleet.robots[0].AttackDino(herd.dinoType[0]);
-                        
-                //        Console.ReadLine();
-                //        Console.Clear();
-                //    }
-                //    else if (fleet.robots[0].robotHealth <= 0)
-                //    {
-                //        fleet.robots.Remove(fleet.robots[0]);
-                //        Console.WriteLine($"{fleet.robots[0]} has been lost from the fleet! The scrap parts will build a new robot!");
-                        
-                //        Console.ReadLine();
-                //        Console.Clear();
-                //    }
-                //    else if (herd.dinoType[0].dinoHealth >= 0)
-                //    {
-                //        herd.dinoType.Remove(herd.dinoType[0]);
-                //        Console.WriteLine($"{herd.dinoType[0]} has been lost from the Herd! They will not be forgotten!");
-                        
-                //        Console.ReadLine();
-                //        Console.Clear();
-                //    }
-                //    else if (fleet.robots.Count < 0)
-                //    {
-                //        DisplayWinner();
-                //        Console.ReadLine();
-                //        Console.Clear();
-                //    }
-                //    else if (herd.dinoType.Count < 0)
-                //    {
-                //        DisplayWinner();
-                //        Console.ReadLine();
-                //        Console.Clear();
-                //    }
-                }
-
-                //Console.WriteLine("No victory, no surrender!!");
-
-                //if (fleet.robots[0].robotHealth <= 0)
-                //{
-                //    fleet.robots.Remove(fleet.);
-                //}
             }
-
-
         }
-        //public void DisplayWinner()
-        //{
-        //    if (herd.dinoType[0].dinoHealth == 0)
-        //    {
-        //        Console.WriteLine("The Robots have won the war! The Dinos have been extinguished!");
-        //    }
-        //    else if (fleet.robots[0].robotHealth == 0)
-        //    {
-        //        Console.WriteLine("The Heard has crush the robots! They have won the war!");
-        //    }
-        //}
-        //if (((fleet.robots[0].robotHealth > 0)) && ((herd.dinoType[0].dinoHealth >0)));
-        //{
-
-        //}
+        public void DisplayWinner()
+        {
+            if (fleet.robots.Count == 0)
+            {
+                Console.WriteLine("The Herd has won!");
+                Console.ReadLine();
+            }
+            else if (herd.dinoType.Count == 0)
+            {
+                Console.WriteLine("The Fleet has Won!");
+            }
+            Console.ReadLine();
+            Console.Clear();
+        }
     }
+}
 
 
 

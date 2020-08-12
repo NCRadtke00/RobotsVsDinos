@@ -14,12 +14,16 @@ namespace RobosVsDinos
         {
             dinoType = new List<Dinosaur>();
             DinosaurAttacks = new DinoAttack[3];
-            DinosaurAttacks[0] = new DinoAttack("chomp", 30);
-            DinosaurAttacks[1] = new DinoAttack("stomp", 20);
-            DinosaurAttacks[2] = new DinoAttack("rage", 40);
+            DinosaurAttacks[0] = new DinoAttack("chomp", 40);
+            DinosaurAttacks[1] = new DinoAttack("stomp", 40);
+            DinosaurAttacks[2] = new DinoAttack("rage", 50);
             dinoType.Add(new Dinosaur("raptor",PickAttack("raptor")));
+            Console.Clear();
             dinoType.Add(new Dinosaur("trex", PickAttack("trex")));
+            Console.Clear();
             dinoType.Add(new Dinosaur("triceratops", PickAttack("triceratops")));
+            Console.WriteLine("This is a mighty Herd built from the strongest from each tribe!");
+            Console.Clear();
         }
         public DinoAttack PickAttack(string dinoName)
         {
